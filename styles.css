@@ -1,3 +1,101 @@
+/*
+  Simple, friendly color scheme for Charity Water
+  Blue for water, yellow for hope/sunshine
+*/
+body {
+    background-color: #f0f8ff; /* light blue background */
+    color: #222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    background-color: #ffe066; /* soft yellow */
+    text-align: center;
+    padding: 40px 10px 20px 10px;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #0077b6; /* strong blue */
+    margin-bottom: 10px;
+}
+
+.story {
+    background-color: #e0f7fa; /* very light blue */
+    padding: 30px 15px;
+    margin: 20px 0;
+    border-left: 6px solid #0077b6;
+}
+
+.impact-story {
+    background-color: #fff;
+    padding: 30px 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.impact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.impact-image {
+    width: 90%;
+    max-width: 350px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #0077b6;
+}
+
+.call-to-action {
+    background-color: #0077b6;
+    color: #fff;
+    text-align: center;
+    padding: 35px 10px;
+}
+
+.donate-button {
+    background-color: #ffe066;
+    color: #0077b6;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.donate-button:hover {
+    background-color: #ffd60a;
+}
+
+.button-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+    .impact-content {
+        flex-direction: column;
+    }
+    .impact-image {
+        width: 100%;
+    }
+}
 /* charity: water Brand Colors & Fonts
 
 Primary Colors:
