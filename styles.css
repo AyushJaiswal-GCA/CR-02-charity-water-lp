@@ -1,100 +1,207 @@
-/*
-  Simple, friendly color scheme for Charity Water
-  Blue for water, yellow for hope/sunshine
-*/
+/* --- Persona and Transparency Sections --- */
+.persona, .transparency {
+  background-color: #FFF7E1;
+  padding: 2rem 1rem;
+  margin: 0 auto 1.5rem auto;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(252, 201, 7, 0.08);
+}
+.persona h2, .transparency h2 {
+  color: #FCC907;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.transparency ul {
+  list-style: disc inside;
+  padding-left: 1.2em;
+}
+.transparency li {
+  margin-bottom: 0.5em;
+}
+
+/* --- Impact Story Section --- */
+.impact-story {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(252, 201, 7, 0.10);
+  max-width: 700px;
+}
+.impact-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+.impact-image {
+  width: 180px;
+  max-width: 45vw;
+  border-radius: 10px;
+  margin-bottom: 0;
+  border: 3px solid #FCC907;
+  transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+}
+.impact-image:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 24px rgba(252, 201, 7, 0.18);
+}
+.impact-content p {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+/* --- Call-to-Action Section --- */
+.call-to-action {
+  background-color: #FCC907;
+  color: #1A1A1A;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-top: 2rem;
+}
+.donate-button {
+  background-color: #1A1A1A;
+  color: #FFF7E1;
+  padding: 0.9rem 2.2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(26,26,26,0.08);
+}
+.donate-button:hover {
+  background-color: #333;
+  color: #FCC907;
+  transform: scale(1.05);
+}
+.button-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+.donate-button:hover .button-icon {
+  transform: rotate(-12deg) scale(1.15);
+}
+
+/* --- Responsive Layout for All Sections --- */
+@media screen and (max-width: 900px) {
+  .impact-content {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .impact-image {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0.5rem;
+  }
+  .hero-image img {
+    max-width: 95vw;
+    margin-top: 1rem;
+  }
+  .story, .persona, .transparency, .impact-story {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .call-to-action {
+    padding: 1.5rem 0.5rem;
+  }
+}
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 90%;
+    margin-top: 1rem;
+  }
+}
+
+/* Hover effect for hero image */
+.hero-image img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
 body {
-    background-color: #f0f8ff; /* light blue background */
-    color: #222;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'League Spartan', sans-serif;
+  margin: 0;
+  background-color: #FFF7E1;
+  color: #1A1A1A;
 }
 
 .hero {
-    background-color: #ffe066; /* soft yellow */
-    text-align: center;
-    padding: 40px 10px 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3rem 2rem;
+  background-color: #FCC907;
 }
 
-.logo {
-    width: 120px;
-    margin-bottom: 10px;
+.hero-text {
+  max-width: 500px;
 }
 
-h1 {
-    color: #0077b6; /* strong blue */
-    margin-bottom: 10px;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #1A1A1A;
+  color: #FFF7E1;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #333;
+}
+
+.hero-image img {
+  max-width: 300px;
+  border-radius: 8px;
 }
 
 .story {
-    background-color: #e0f7fa; /* very light blue */
-    padding: 30px 15px;
-    margin: 20px 0;
-    border-left: 6px solid #0077b6;
+  padding: 2rem;
+  background-color: white;
 }
 
-.impact-story {
-    background-color: #fff;
-    padding: 30px 15px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+.story h2 {
+  font-size: 1.75rem;
+  color: #FCC907;
 }
 
-.impact-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.impact-image {
-    width: 90%;
-    max-width: 350px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    border: 3px solid #0077b6;
-}
-
-.call-to-action {
-    background-color: #0077b6;
-    color: #fff;
-    text-align: center;
-    padding: 35px 10px;
-}
-
-.donate-button {
-    background-color: #ffe066;
-    color: #0077b6;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 15px;
-    display: inline-flex;
-    align-items: center;
-    transition: background 0.2s;
-}
-
-.donate-button:hover {
-    background-color: #ffd60a;
-}
-
-.button-icon {
-    width: 28px;
-    height: 28px;
-    margin-right: 10px;
-}
-
-/* Responsive for mobile */
-@media (max-width: 600px) {
-    .impact-content {
-        flex-direction: column;
-    }
-    .impact-image {
-        width: 100%;
-    }
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  background-color: #1A1A1A;
+  color: #FFF7E1;
 }
 /* charity: water Brand Colors & Fonts
 
